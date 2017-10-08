@@ -1,0 +1,14 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {},
+  "license": "MIT",
+  "dependencies": {
+    "codemirror": "^5.30.0",
+    "serve": "^6.2.0"
+  },
+  "scripts": {
+    "start": "serve -c 0 -s"
+  }
+}

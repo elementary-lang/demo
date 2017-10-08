@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Elementary Language</title>
+    <link rel="stylesheet" href="https://unpkg.com/codemirror@5.30.0/lib/codemirror.css" />
+    <link rel="stylesheet" href="https://unpkg.com/codemirror@5.30.0/theme/material.css" />
+    <script src="https://unpkg.com/getlibs"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+    System.config({
+  map: {
+    'react-dom': 'react-dom',
+    htmlparser2: 'https://wzrd.in/standalone/htmlparser2',
+    prettier: 'https://bundle.run/prettier@1.6.1',
+    'codemirror-xml': './node_modules/codemirror/mode/xml/xml.js',
+    'codemirror-js': './node_modules/codemirror/mode/javascript/javascript.js'
+  }
+})
+System.import('./index.js')
+</script>
+
+  </body>
+</html>
