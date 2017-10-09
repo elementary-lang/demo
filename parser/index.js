@@ -56,10 +56,9 @@ export default function(el, cb) {
       },
       onend: function() {
         cb(null, prettier.format(currentItemList.content, { semi: false }))
-        //cb(null, currentItemList.content)
       }
     },
-    { decodeEntities: true }
+    { decodeEntities: true, lowerCaseTags: false }
   )
   parser.write(el)
   parser.end()
