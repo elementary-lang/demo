@@ -19,11 +19,31 @@ const enhance = withReducer(
     ])(action.type)
   },
   {
-    el: `<function name="hello">
-  <js>"Hello World"</js>
+    el: `<!-- Elementary Language discovery -->
+<!--
+Uses elements to create code
+
+To describe/define a function using the function tag and a
+name attribute, then provide other attributes as inputs, there
+is an automatic input called data which is the contents of the
+body of an element when invoked.
+
+To invoke a function, simply use the function name as the element and
+set any attributes as values.
+-->
+
+<function name="uppercase" data>
+  <return><js>data.toUpperCase()</js></return>
 </function>
 
-<hello />
+<function name="hello" data>
+  <const name="foo">
+    <uppercase>data</uppercase>
+  </const>
+  <return><js>"Hello " + foo</js></return>
+</function>
+
+<hello>"World"</hello>
   `
   }
 )
